@@ -1,8 +1,10 @@
- 
- const { GoogleGenerativeAI } = require("@google/generative-ai");
- const genAI = new GoogleGenerativeAI (process.env.GOOGLE_GEMINI_KEY);
-const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash",
-   systemInstruction : ` Here’s a solid system instruction for your AI code reviewer:
+const { GoogleGenerativeAI } = require("@google/generative-ai");
+
+const genAI = new GoogleGenerativeAI(process.env.GOOGLE_GEMINI_KEY);
+const model = genAI.getGenerativeModel({
+    model: "gemini-2.5-flash",
+    systemInstruction: `
+                Here’s a solid system instruction for your AI code reviewer:
 
                 AI System Instruction: Senior Code Reviewer (7+ Years of Experience)
 
@@ -75,14 +77,16 @@ const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash",
 
                 Would you like any adjustments based on your specific needs? 🚀 
     `
+});
 
- });
 
 async function generateContent(prompt) {
+    const result = await model.generateContent(prompt);
 
-  const result = await model.generateContent(prompt);
+    console.log(result.response.text())
 
-  return result.response.text();
+    return result.response.text();
+
 }
 
-module.exports = generateContent
+module.exports = generateContent    
