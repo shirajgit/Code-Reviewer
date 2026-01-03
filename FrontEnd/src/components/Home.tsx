@@ -100,7 +100,7 @@ export default function Home() {
 }
 
 /* FEATURE CARD */
- function FeatureCard({ icon , title , desc }) {
+ function FeatureCard({ icon, title, desc }: { icon: React.ReactNode; title: string; desc: string }) {
   return (
     <div className="bg-gray-900/60 backdrop-blur-xl border border-gray-800
                     rounded-2xl p-6 text-center hover:scale-[1.03]
