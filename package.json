@@ -1,7 +1,8 @@
 {
   "dependencies": {
+    "concurrently": "^9.2.1",
     "react-simple-code-editor": "^0.14.1"
-  } ,
+  },
   "name": "fullstack-app",
   "private": true,
   "scripts": {
@@ -10,8 +11,3 @@
     "dev": "concurrently \"npm run backend\" \"npm run frontend\""
   }
 }
-
-  
-
- 
-
