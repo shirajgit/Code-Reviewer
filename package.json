@@ -3,11 +3,11 @@
     "concurrently": "^9.2.1",
     "react-simple-code-editor": "^0.14.1"
   },
-  "name": "fullstack-app",
+  "name": "code-reviewer",
   "private": true,
   "scripts": {
-    "frontend": "cd frontend && npm run dev",
-    "backend": "cd backend && npm start",
+    "frontend": "cd FrontEnd && npm run dev",
+    "backend": "cd BackEnd && npm start",
     "dev": "concurrently \"npm run backend\" \"npm run frontend\""
   }
 }
