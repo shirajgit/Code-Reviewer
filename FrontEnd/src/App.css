@@ -26,13 +26,17 @@ main .left , main .right{
 }
 
 main .left{
-  background-color: black;
+  background-color: wheat;
   position: relative;
   padding: 0;
 }
 
 main .right{
-  background-color: rgb(228, 220, 220)
+  background-color: rgb(228, 220, 220);
+  padding: 1.7rem 2rem;
+  overflow: auto;
+  font-size: 1rem;
+
 }
 
 .left .code,
