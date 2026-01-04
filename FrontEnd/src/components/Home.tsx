@@ -1,4 +1,5 @@
 import { ArrowRight, Code2, Sparkles, ShieldCheck } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -27,15 +28,15 @@ export default function Home() {
           </p>
 
           <div className="mt-10 flex justify-center gap-4">
-            <a
-              href="/editor"
+            <Link
+               to="/editor"
               className="inline-flex items-center gap-2 px-7 py-3 rounded-xl
                          bg-gradient-to-r from-green-400 to-emerald-500
                          text-black font-bold hover:scale-105 transition"
             >
               Start Reviewing
               <ArrowRight size={18} />
-            </a>
+            </Link>
 
             <a
               href="#features"
@@ -83,15 +84,15 @@ export default function Home() {
             Start reviewing your JavaScript code in seconds.
           </p>
 
-          <a
-            href="/editor"
+          <Link
+            to="/editor"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-xl
                        bg-gradient-to-r from-green-400 to-emerald-500
                        text-black font-bold hover:scale-105 transition"
           >
             Get Started Free
             <ArrowRight size={18} />
-          </a>
+          </Link>
         </div>
       </section>
 

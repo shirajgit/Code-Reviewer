@@ -1,4 +1,5 @@
 import { Code2 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
@@ -15,18 +16,18 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
           <a href="/" className="hover:text-green-400 transition">Home</a>
           <a href="#features" className="hover:text-green-400 transition">Features</a>
-          <a href="/editor" className="hover:text-green-400 transition">Editor</a>
+          <Link to="/editor" className="hover:text-green-400 transition">Editor</Link>
         </div>
 
         {/* CTA */}
-        <a
-          href="/editor"
+        <Link
+          to="/editor"
           className="hidden md:inline-flex items-center gap-2 px-5 py-2 rounded-xl
                      bg-gradient-to-r from-green-400 to-emerald-500
                      text-black font-bold hover:scale-105 transition"
         >
           Try Now
-        </a>
+        </Link>
 
         {/* MOBILE MENU BUTTON */}
         <button className="md:hidden text-gray-300 hover:text-green-400">
